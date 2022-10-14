@@ -1,0 +1,130 @@
+@media (max-width: 999px) {
+  .navbar {
+    .hamburger {
+      display: block !important;
+    }
+
+    .button-contain {
+      display: none;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      height: calc(100vh - 100px);
+      position: absolute;
+      padding: 20px 15px;
+      background-color: #fff;
+      z-index: 99;
+      top: 100px;
+      right: -100%;
+      flex-direction: column !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      transition: all .3s linear;
+
+      &.active-nav {
+        right: 0px;
+      }
+
+      li {
+        width: 100%;
+        margin: 0px !important;
+        padding: 10px 0px;
+        border-bottom: 1px solid rgba($color: #AF1E2C, $alpha: 0.3);
+
+        &:last-child {
+          border-bottom: 0px !important;
+        }
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+    .brand-name img {
+      object-position: left !important;
+    }
+
+    &.scrolled {
+      .navbar-nav {
+        top: 80px;
+        height: calc(100vh - 80px);
+      }
+    }
+  }
+
+  header {
+    padding: 150px 0px 150px;
+
+    h1 {
+      font-size: 27px !important;
+
+      span {
+        font-size: 25px !important;
+      }
+    }
+  }
+
+  .order-mobile-0 {
+    order: 0 !important;
+  }
+
+  .order-mobile-1 {
+    order: 1 !important;
+  }
+
+  .services .box {
+    h1 {
+      font-size: 16px !important;
+    }
+
+    .custom-btn {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .about-us {
+    &::after, &::before {
+      width: 100%;
+      background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+  }
+
+  .features {
+    padding: 30px 0px;
+  }
+
+  .contact-us {
+    &::after {
+      width: 100% !important;
+      height: 48%;
+      bottom: 0px !important;
+      top: unset !important;
+    }
+
+    .content .box:last-child {
+      margin-bottom: 50px !important;
+    }
+  }
+
+  .partners {
+    padding-bottom: 0px;
+
+    .heading {
+      margin-bottom: 30px;
+    }
+
+    .owl-partners img {
+      height: 200px !important;
+    }
+  }
+}
