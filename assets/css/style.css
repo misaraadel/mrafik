@@ -1005,7 +1005,7 @@ ul {
   position: relative;
   overflow: hidden;
   z-index: 9;
-  border: 0px !important;
+  border: 1px solid var(--primary-color) !important;
   outline: 1px solid var(--primary-color) !important;
 }
 .button-contain .custom-btn:first-child {
@@ -1199,7 +1199,7 @@ header .contain h1 span {
 header .arrow-btn {
   width: 50px;
   height: 50px;
-  border: 0px;
+  border: 1px solid var(--light-color);
   display: flex;
   align-items: center;
   align-content: center;
