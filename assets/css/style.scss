@@ -220,18 +220,29 @@
 header {
   width: 100%;
   padding: 250px 0px 150px 0px;
-  background: url('../images/intro.jpg') top right / cover no-repeat;
+  background: url('../images/intro.jpg') center / cover no-repeat;
   position: relative;
   z-index: 9;
 
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
   .contain {
     width: 100%;
 
     h1 {
       font-size: 35px;
       font-weight: 900;
-      color: var(--light-color);
-      margin: 0px;
+      color: var(--primary-color);
+      margin-bottom: 30px;
       
       span {
         display: block;
@@ -239,68 +250,6 @@ header {
         color: var(--primary-color);
         font-weight: 900;
         font-size: 35px;
-      }
-    }
-
-    p {
-      color: rgba($color: #fff, $alpha: 0.80);
-      font-size: 15px;
-      font-weight: 500;
-      margin: 30px 0px;
-      
-      span {
-        color: var(--primary-color);
-        font-size: 15px;
-        font-weight: 500;
-      }
-    }
-
-    .custom-btn {
-      outline-color: var(--light-color);
-
-      &::after, &::before {
-        background-color: var(--light-color);
-      }
-
-      &.border-btn {
-  
-        img {
-          filter: var(--light-filter);
-        }
-  
-        span {
-          color: var(--light-color)
-        }
-  
-        &:hover {
-          img {
-            filter: var(--primary-filter);
-          }
-
-          span {
-            color: var(--primary-color);
-          }
-        }
-      }
-
-      &.bk-btn {
-        img {
-          filter: var(--primary-filter);
-        }
-
-        span {
-          color: var(--primary-color);
-        }
-
-        &:hover {
-          img {
-            filter: var(--light-filter);
-          }
-    
-          span {
-            color: var(--light-color)
-          }
-        }
       }
     }
   }
@@ -313,6 +262,7 @@ header {
     align-content: center;
     justify-content: center;
     outline: 1px solid var(--light-color);
+    background-color: rgba($color: #000000, $alpha: 0.5);
     border-radius: 50%;
     position: absolute;
     bottom: 50px;
@@ -676,9 +626,9 @@ header {
       }
 
       .image-content {
-        width: 90px;
-        height: 90px;
-        background-color: rgba($color: #AF1E2C, $alpha: 0.20);
+        width: 40px;
+        height: 40px;
+        background-color: rgba($color: #AF1E2C, $alpha: 0);
         border-radius: 50%;
         display: flex;
         align-content: center;
@@ -693,7 +643,7 @@ header {
       }
 
       .contain {
-        width: calc(100% - 100px);
+        width: calc(100% - 60px);
 
         .title {
           font-size: 15px;
@@ -791,19 +741,20 @@ footer {
       }
     }
   }
+}
 
-  .copyrights {
-    width: 100%;
-    padding: 10px 0px 0px;
-    border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
-    text-align: center;
+.copyrights {
+  width: 100%;
+  padding: 10px 0px 0px;
+  border-top: 1px solid rgba($color: #000, $alpha: 0.3);
+  text-align: center;
+  margin-top: 20px;
 
-    p {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 500;
-      margin: 0px;
-    }
+  p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px;
   }
 }
 

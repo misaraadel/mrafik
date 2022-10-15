@@ -1157,9 +1157,19 @@ ul {
 header {
   width: 100%;
   padding: 250px 0px 150px 0px;
-  background: url("../images/intro.jpg") top right/cover no-repeat;
+  background: url("../images/intro.jpg") center/cover no-repeat;
   position: relative;
   z-index: 9;
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 header .contain {
   width: 100%;
@@ -1167,8 +1177,8 @@ header .contain {
 header .contain h1 {
   font-size: 35px;
   font-weight: 900;
-  color: var(--light-color);
-  margin: 0px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
 }
 header .contain h1 span {
   display: block;
@@ -1176,47 +1186,6 @@ header .contain h1 span {
   color: var(--primary-color);
   font-weight: 900;
   font-size: 35px;
-}
-header .contain p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  font-weight: 500;
-  margin: 30px 0px;
-}
-header .contain p span {
-  color: var(--primary-color);
-  font-size: 15px;
-  font-weight: 500;
-}
-header .contain .custom-btn {
-  outline-color: var(--light-color);
-}
-header .contain .custom-btn::after, header .contain .custom-btn::before {
-  background-color: var(--light-color);
-}
-header .contain .custom-btn.border-btn img {
-  filter: var(--light-filter);
-}
-header .contain .custom-btn.border-btn span {
-  color: var(--light-color);
-}
-header .contain .custom-btn.border-btn:hover img {
-  filter: var(--primary-filter);
-}
-header .contain .custom-btn.border-btn:hover span {
-  color: var(--primary-color);
-}
-header .contain .custom-btn.bk-btn img {
-  filter: var(--primary-filter);
-}
-header .contain .custom-btn.bk-btn span {
-  color: var(--primary-color);
-}
-header .contain .custom-btn.bk-btn:hover img {
-  filter: var(--light-filter);
-}
-header .contain .custom-btn.bk-btn:hover span {
-  color: var(--light-color);
 }
 header .arrow-btn {
   width: 50px;
@@ -1226,6 +1195,7 @@ header .arrow-btn {
   align-content: center;
   justify-content: center;
   outline: 1px solid var(--light-color);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   position: absolute;
   bottom: 50px;
@@ -1554,9 +1524,9 @@ header .arrow-btn img {
   margin: 0px;
 }
 .contact-us .content .box .image-content {
-  width: 90px;
-  height: 90px;
-  background-color: rgba(175, 30, 44, 0.2);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(175, 30, 44, 0);
   border-radius: 50%;
   display: flex;
   align-content: center;
@@ -1570,7 +1540,7 @@ header .arrow-btn img {
      object-fit: contain;
 }
 .contact-us .content .box .contain {
-  width: calc(100% - 100px);
+  width: calc(100% - 60px);
 }
 .contact-us .content .box .contain .title {
   font-size: 15px;
@@ -1655,14 +1625,16 @@ footer .content .socail-media li a:hover img {
   -webkit-animation: fadeInLeft 0.4s linear both;
           animation: fadeInLeft 0.4s linear both;
 }
-footer .copyrights {
+
+.copyrights {
   width: 100%;
   padding: 10px 0px 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center;
+  margin-top: 20px;
 }
-footer .copyrights p {
-  color: #fff;
+.copyrights p {
+  color: #000;
   font-size: 15px;
   font-weight: 500;
   margin: 0px;
