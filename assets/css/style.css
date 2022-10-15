@@ -1006,7 +1006,6 @@ ul {
   overflow: hidden;
   z-index: 9;
   border: 1px solid var(--primary-color) !important;
-  outline: 1px solid var(--primary-color) !important;
 }
 .button-contain .custom-btn:first-child {
   -webkit-margin-end: 20px;
@@ -1204,7 +1203,6 @@ header .arrow-btn {
   align-items: center;
   align-content: center;
   justify-content: center;
-  outline: 1px solid var(--light-color);
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   position: absolute;
