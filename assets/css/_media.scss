@@ -56,13 +56,21 @@
   }
 
   header {
-    padding: 150px 0px 150px;
 
     h1 {
       font-size: 27px !important;
 
       span {
         font-size: 25px !important;
+      }
+    }
+
+    .button-contain {
+      flex-direction: column;
+
+      .custom-btn:first-child {
+        margin-inline-end: 0px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -95,7 +103,59 @@
   .about-us {
     &::after, &::before {
       width: 100%;
-      background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+
+    h1, p {
+      color: var(--light-color) !important;
+    }
+
+    .custom-btn {
+      outline-color: var(--light-color) !important;
+
+      &::after, &::before {
+        background-color: var(--light-color);
+      }
+
+      &.border-btn {
+
+        img {
+          filter: var(--light-filter);
+        }
+
+        span {
+          color: var(--light-color)
+        }
+
+        &:hover {
+          img {
+            filter: var(--primary-filter);
+          }
+
+          span {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      &.bk-btn {
+        img {
+          filter: var(--primary-filter);
+        }
+
+        span {
+          color: var(--primary-color);
+        }
+
+        &:hover {
+          img {
+            filter: var(--light-filter);
+          }
+
+          span {
+            color: var(--light-color)
+          }
+        }
+      }
     }
   }
 

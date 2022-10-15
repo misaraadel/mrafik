@@ -1005,7 +1005,8 @@ ul {
   position: relative;
   overflow: hidden;
   z-index: 9;
-  outline: 1px solid var(--primary-color);
+  border: 0px !important;
+  outline: 1px solid var(--primary-color) !important;
 }
 .button-contain .custom-btn:first-child {
   -webkit-margin-end: 20px;
@@ -1157,6 +1158,7 @@ ul {
 header {
   width: 100%;
   padding: 250px 0px 150px 0px;
+  height: 100vh;
   background: url("../images/intro.jpg") center/cover no-repeat;
   position: relative;
   z-index: 9;
@@ -1173,6 +1175,13 @@ header::after {
 }
 header .contain {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 header .contain h1 {
   font-size: 35px;
@@ -1190,6 +1199,7 @@ header .contain h1 span {
 header .arrow-btn {
   width: 50px;
   height: 50px;
+  border: 0px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -1685,14 +1695,19 @@ footer .content .socail-media li a:hover img {
     top: 80px;
     height: calc(100vh - 80px);
   }
-  header {
-    padding: 150px 0px 150px;
-  }
   header h1 {
     font-size: 27px !important;
   }
   header h1 span {
     font-size: 25px !important;
+  }
+  header .button-contain {
+    flex-direction: column;
+  }
+  header .button-contain .custom-btn:first-child {
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+    margin-bottom: 20px;
   }
   .order-mobile-0 {
     order: 0 !important;
@@ -1712,7 +1727,39 @@ footer .content .socail-media li a:hover img {
   }
   .about-us::after, .about-us::before {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .about-us h1, .about-us p {
+    color: var(--light-color) !important;
+  }
+  .about-us .custom-btn {
+    outline-color: var(--light-color) !important;
+  }
+  .about-us .custom-btn::after, .about-us .custom-btn::before {
+    background-color: var(--light-color);
+  }
+  .about-us .custom-btn.border-btn img {
+    filter: var(--light-filter);
+  }
+  .about-us .custom-btn.border-btn span {
+    color: var(--light-color);
+  }
+  .about-us .custom-btn.border-btn:hover img {
+    filter: var(--primary-filter);
+  }
+  .about-us .custom-btn.border-btn:hover span {
+    color: var(--primary-color);
+  }
+  .about-us .custom-btn.bk-btn img {
+    filter: var(--primary-filter);
+  }
+  .about-us .custom-btn.bk-btn span {
+    color: var(--primary-color);
+  }
+  .about-us .custom-btn.bk-btn:hover img {
+    filter: var(--light-filter);
+  }
+  .about-us .custom-btn.bk-btn:hover span {
+    color: var(--light-color);
   }
   .features {
     padding: 30px 0px;
